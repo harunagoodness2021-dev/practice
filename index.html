@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Klore Tips</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+<div class="nav">
+
+<div class="logo">
+<img src="20260314_150410-removebg-preview.png" alt="Klore nails Nails Logo">
+</div>
+
+<div class="menu-toggle" id="menu-toggle">
+<i class="fas fa-bars"></i>
+</div>
+
+<nav id="nav-menu">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+<div class="hero-content">
+
+<h1>Luxury Nail Care & Art</h1>
+
+<p>Elegant manicures, beautiful designs, and professional nail care.</p>
+
+<button>Book Appointment</button>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+<div class="about-text">
+
+<h2>About Our Studio</h2>
+
+<p>
+At K'lore Tips we specialize in modern nail designs, luxury manicures, and spa pedicures.
+Our professional technicians focus on quality, hygiene, and beautiful results.
+</p>
+
+</div>
+
+<div class="about-img">
+
+<img src="images/20260314_150247.jpg" class="clickable-img">
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services" class="services">
+
+<h2>Our Services</h2>
+
+<div class="service-grid">
+
+<div class="service-card">
+
+<img src="images/20260314_150143.jpg" class="clickable-img">
+
+<h3>Male Nail Art</h3>
+
+<p>Professional nail care and polish.</p>
+
+</div>
+
+<div class="service-card">
+
+<img src="images/20260314_150129.jpg" class="clickable-img">
+
+<h3>Stilettos</h3>
+
+<p>Beautiful and well styled nails</p>
+
+</div>
+
+<div class="service-card">
+
+<img src="images/20260314_150311.jpg" class="clickable-img">
+
+<h3>Almond nails</h3>
+
+<p>Creative and stylish nail designs.</p>
+
+</div>
+
+<div class="service-card">
+
+<img src="images/20260314_150330.jpg" class="clickable-img">
+
+<h3>Gel Polish</h3>
+
+<p>Long lasting shine and color.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery">
+  <h2>Our Nail Designs</h2>
+  <p>Take a look at some of our latest manicures and nail art designs.</p>
+
+  <div class="gallery-container">
+    <div class="gallery-item large">
+      <img src="images/20260314_150143.jpg" alt="Design 1" class="clickable-img">
+    </div>
+    <div class="gallery-item small">
+      <img src="images/20260314_150202.jpg" alt="Design 2" class="clickable-img">
+    </div>
+    <div class="gallery-item small">
+      <img src="IMG-20260308-WA0037.jpg" alt="Design 3" class="clickable-img">
+    </div>
+    <div class="gallery-item medium">
+      <img src="IMG-20260314-WA0026.jpg" alt="Design 4" class="clickable-img">
+    </div>
+    <div class="gallery-item medium">
+      <img src="images/20260314_150129.jpg" alt="Design 5" class="clickable-img">
+    </div>
+    <div class="gallery-item small">
+      <img src="images/20260314_150311.jpg" alt="Design 6" class="clickable-img">
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Enlarged Image">
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+  <h2>Connect With Us</h2>
+  <p>Follow us on social media and stay updated with our latest designs!</p>
+
+  <div class="social-cards">
+    <a href="#" class="social-card instagram">
+      <i class="fab fa-instagram"></i>
+      <span>Instagram</span>
+    </a>
+
+    <a href="#" class="social-card facebook">
+      <i class="fab fa-facebook-f"></i>
+      <span>Facebook</span>
+    </a>
+
+    <a href="#" class="social-card tiktok">
+      <i class="fab fa-tiktok"></i>
+      <span>TikTok</span>
+    </a>
+
+    <a href="#" class="social-card twitter">
+      <i class="fab fa-twitter"></i>
+      <span>Twitter</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+
+<p>© 2026 K'lore Tips</p>
+
+</footer>
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", () => {
+navMenu.classList.toggle("active");
+});
+
+</script>
+<div class="lightbox" id="lightbox">
+  <img src="" alt="Enlarged Image">
+</div>
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+const images = document.querySelectorAll('.clickable-img');
+
+images.forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src; // show clicked image
+  });
+});
+
+// Close when clicking outside the image
+lightbox.addEventListener('click', e => {
+  if(e.target !== lightboxImg){
+    lightbox.style.display = 'none';
+  }
+});
+</script>
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+const galleryImages = document.querySelectorAll('.clickable-img');
+
+galleryImages.forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+  });
+});
+
+// Close when clicking outside image
+lightbox.addEventListener('click', e => {
+  if(e.target !== lightboxImg){
+    lightbox.style.display = 'none';
+  }
+});
+</script>
+</body>
+</html>
